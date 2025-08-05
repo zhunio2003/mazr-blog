@@ -1,3 +1,105 @@
 .mainHeader {
-    
+    background-color: azure;
+    border-bottom: 1px solid #333;
+    padding: var(--space-4) 0;
+}
+
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 5rem;
+    width: auto;
+    filter: brightness(0.7) sepia(1) hue-rotate(120deg) saturate(4);
+    transition: opacity 0.2s ease;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+.mainNav {
+    display: flex;
+    gap: var(--space-8);
+    align-items: center;
+}
+
+.navLink {
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.navLink:hover,
+.navLink:active {
+    color: #014A3D;
+}
+
+.searchSection {
+    display: flex;
+    align-items: center;
+}
+
+.searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666666;
+    padding: var(--space-2) var(--space-3);
+    padding-right: 2.5rem;
+    color: #014A3D;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    width: 250px;
+    transition: border-color 0.2s ease;
+}
+
+.searchInput::placeholder {
+    color: #014A3D;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-bottom: 2px #014A3D solid;
+}
+
+.searchIcon {
+    position: absolute;
+    right: var(--space-3);
+    color: #014A3D;
+    pointer-events: none; /* ELiminar cualquier evento*/
+}
+
+/* Responsivo específico del Header */
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .mainNav {
+    gap: var(--space-4);
+  }
+  
+  .searchInput {
+    width: 150px;
+  }
 }
