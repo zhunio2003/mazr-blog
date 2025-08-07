@@ -1,17 +1,14 @@
-import Header from './components/common/Header'
+import HomePage from './pages/HomePage'
 import './styles/globals.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className='main-layout'>
-      <Header/>
-      <main className='content container'>
-        <p>Stream processing 1</p>
-        <p>Stream processing 1</p>
-        <p>Stream processing 1</p>
-
-      </main>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />}/>
+        </Routes>       
+    </BrowserRouter>
   )
 }
 
