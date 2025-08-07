@@ -7,6 +7,7 @@ import {
   Youtube,
 } from "lucide-react";
 import "../../styles/components/HeaderHome.css";
+
 const HeaderHome = () => {
   return (
     <header className="epic-header">
@@ -14,9 +15,6 @@ const HeaderHome = () => {
         <div className="header-container">
           {/* Redes sociales */}
           <div className="social-links">
-            <a href="·" className="social-link">
-              <Facebook size={18} />
-            </a>
             <a href="·" className="social-link">
               <Instagram size={18} />
             </a>
